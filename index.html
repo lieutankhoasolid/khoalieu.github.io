@@ -5,101 +5,192 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Liễu Tấn Khoa - Portfolio</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; color: #222; }
-    header { background: #1f1f1f; color: #fff; padding: 60px 40px; text-align: center; }
-    header h1 { margin: 0; font-size: 40px; }
-    header p { margin-top: 10px; font-size: 18px; opacity: .8; }
-    section { padding: 40px 60px; }
-    h2 { border-left: 5px solid #222; padding-left: 15px; font-size: 26px; }
-    .list { margin-top: 15px; }
-    .list li { margin-bottom: 8px; }
-    .container { max-width: 900px; margin: auto; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #27293d);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px;
+      animation: fadeDown 1.2s ease;
+    }
+
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 20px;
+      opacity: 0.8;
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section {
+      max-width: 900px;
+      margin: auto;
+      padding: 50px 20px;
+      animation: fadeIn 1.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    h2 {
+      border-left: 5px solid #4fd1c5;
+      padding-left: 12px;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .skill-box {
+      background: #32354a;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .skill-box:hover {
+      transform: translateY(-5px);
+      background: #3e415c;
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #4fd1c5;
+      margin-bottom: 20px;
+      animation: popIn 1s ease;
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .interests-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .interest-pill {
+      background: #3b3f57;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+    }
+
+    ul { padding-left: 18px; }
+
   </style>
 </head>
 <body>
   <header>
+    <img src="profile.jpg" class="profile-img" alt="Your Image Here" />
     <h1>Liễu Tấn Khoa</h1>
-    <p>Future Computer Science (AI) Student</p>
-    <p><i>“Dám ước mơ, dám thực hiện”</i></p>
-    <p><b>Objective:</b> "Máy tính không chỉ là công cụ, nó là người bạn đắc lực của con người"</p>
+    <p>"Dám ước mơ, dám thực hiện"</p>
   </header>
 
-  <div class="container">
-    <section>
-      <h2>Skills</h2>
-      <ul class="list">
-        <li>C/C++</li>
-        <li>Python</li>
-        <li>Java</li>
-        <li>HTML / CSS</li>
-        <li>SQL</li>
-        <li>LaTeX</li>
-        <li>PHP</li>
-        <li>Arduino</li>
-      </ul>
-    </section>
+  <div class="section">
+    <h2>Objective</h2>
+    <p>"Máy tính không chỉ là công cụ, nó là người bạn đắc lực của con người"</p>
+  </div>
 
-    <section>
-      <h2>Interests</h2>
-      <ul class="list">
-        <li>Coding</li>
-        <li>Gaming</li>
-        <li>Listening to music</li>
-        <li>Researching & Investing in stocks</li>
-      </ul>
-    </section>
+  <div class="section">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill-box">C/C++</div>
+      <div class="skill-box">Python</div>
+      <div class="skill-box">Java</div>
+      <div class="skill-box">HTML & CSS</div>
+      <div class="skill-box">SQL</div>
+      <div class="skill-box">LaTeX</div>
+      <div class="skill-box">PHP</div>
+      <div class="skill-box">Arduino</div>
+    </div>
+  </div>
 
-    <section>
-      <h2>Education</h2>
-      <p><b>Le Hong Phong High School for the Gifted</b> — Math Major (2021–2024)</p>
-      <ul class="list">
-        <li>GPA: 9.5 (9th), 9.3 (10th), 9.6 (11th), 9.5 (12th)</li>
-        <li>SAT: 1510 (720 Verbal, 790 Math)</li>
-        <li>IELTS: 7.0 (R 8.0, L 7.5, W 6.5, S 6.0)</li>
-        <li>AP Scores: Calculus BC (5), Computer Science A (5)</li>
-      </ul>
-    </section>
+  <div class="section">
+    <h2>Interests</h2>
+    <div class="interests-list">
+      <div class="interest-pill">Coding</div>
+      <div class="interest-pill">Gaming</div>
+      <div class="interest-pill">Listening to music</div>
+      <div class="interest-pill">Research</div>
+      <div class="interest-pill">Stock investing</div>
+    </div>
+  </div>
 
-    <section>
-      <h2>Capstone Project</h2>
-      <p><i>(Sẽ cập nhật khi bạn gửi project)</i></p>
-    </section>
+  <div class="section">
+    <h2>Education</h2>
+    <p><strong>Le Hong Phong High School for the Gifted</strong></p>
+    <p>Math Major (2021–2024)</p>
+    <ul>
+      <li>GPA: 9.5 (9th)</li>
+      <li>GPA: 9.3 (10th)</li>
+      <li>GPA: 9.6 (11th)</li>
+      <li>GPA: 9.5 (12th)</li>
+      <li>SAT: 1510 (790 Math)</li>
+      <li>IELTS: 7.0</li>
+      <li>AP Calculus BC: 5</li>
+      <li>AP Computer Science A: 5</li>
+    </ul>
+  </div>
 
-    <section>
-      <h2>Honors & Awards</h2>
-      <ul class="list">
-        <li>First Prize – Mathematics, HCMC Excellent Student Contest (Grade 9)</li>
-        <li>Third Prize – Solving Math on Casio Calculator, HCMC Contest (Grade 9)</li>
-        <li>Third Prize – Myor Competition (Group 1)</li>
-        <li>Participation Certificate – Master Robot Builder Competition (SAMK University, Finland)</li>
-        <li>Technical Member – Nadav Shoham Robotraffic Competition 2023</li>
-      </ul>
-    </section>
+  <div class="section">
+    <h2>Honors & Awards</h2>
+    <ul>
+      <li>First Prize – Mathematics (HCMC Grade 9)</li>
+      <li>Third Prize – Casio Math Contest (HCMC Grade 9)</li>
+      <li>Third Prize – Myor Competition</li>
+      <li>Participation – Master Robot Builder (Finland)</li>
+      <li>Technical Member – Robotraffic 2023</li>
+    </ul>
+  </div>
 
-    <section>
-      <h2>Extracurricular Activities</h2>
-      <ul class="list">
-        <li>Volunteering Team Member – Green Summer Campaign (Jun 2025 – Aug 2025)</li>
-        <li>Candidate Assistance – Exam Support Volunteer Program (Jun 2025 – Jul 2025)</li>
-        <li>Home Tutor (Jul 2024 – Present)</li>
-        <li>Technical Team Member – LHP Science Club (Mar 2022 – Aug 2023)</li>
-      </ul>
-    </section>
+  <div class="section">
+    <h2>Extracurriculars</h2>
+    <ul>
+      <li>Volunteering – Green Summer Campaign (2025)</li>
+      <li>Candidate Assistance – Exam Support Program (2025)</li>
+      <li>Tutor – Home Tutoring (2024–Present)</li>
+      <li>Technical Team – LHP Science Club (2022–2023)</li>
+    </ul>
+  </div>
 
-    <section>
-      <h2>Leadership Experience</h2>
-      <ul class="list">
-        <li>Co-founder – Game Community on Discord (50+ Members, 2000+ Followers, Yearly Tournaments)</li>
-        <li>Founder – Game Group on Facebook (Jun 2024 – Present)</li>
-      </ul>
-    </section>
+  <div class="section">
+    <h2>Leadership</h2>
+    <ul>
+      <li>Co-founder – Game Community (50+ Members, 2000+ Followers)</li>
+      <li>Founder – Game Group on Facebook (2024–Present)</li>
+    </ul>
+  </div>
 
-    <section>
-      <h2>Work Experience</h2>
-      <ul class="list">
-        <li>Data Entry Coder — "Developed and managed instructional materials for mathematics training programs" Project (Mar 2025 – May 2025)</li>
-      </ul>
-    </section>
+  <div class="section">
+    <h2>Work Experience</h2>
+    <ul>
+      <li>Data Entry Coder – Mathematics Training Project (2025)</li>
+    </ul>
   </div>
 </body>
 </html>
