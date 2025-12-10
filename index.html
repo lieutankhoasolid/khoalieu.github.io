@@ -360,132 +360,70 @@
   font-size: 16px;
 }
     /* ===== EDUCATION SECTION ===== */
+    /* ======================================
+   EDUCATION — EXACT FORMAT LIKE SAMPLE
+   ====================================== */
+
 .edu-section {
   background: #0f1624;
-  padding: 80px 5%;
+  padding: 100px 6%;
   color: white;
 }
 
 .edu-container {
-  max-width: 1400px;
+  max-width: 1500px;
   margin: auto;
-  display: flex;
-  justify-content: space-between;
-  gap: 60px;
-  align-items: flex-start;
-}
-
-.edu-left {
-  width: 55%;
-}
-
-.edu-title {
-  font-size: 38px;
-  font-weight: 700;
-  margin-bottom: 30px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #5aa0ff;
-}
-
-.edu-school {
-  font-size: 30px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.edu-major {
-  color: #4da3ff;
-  font-size: 22px;
-  margin-bottom: 5px;
-}
-
-.edu-year {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-.edu-block {
-  margin-bottom: 25px;
-}
-
-.edu-block h4 {
-  font-size: 22px;
-  margin-bottom: 8px;
-  font-weight: 600;
-}
-
-.edu-block p {
-  font-size: 18px;
-  opacity: 0.9;
-}
-
-.edu-right {
-  width: 45%;
-}
-
-.edu-right img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-  object-fit: cover;
-}
-    /* ===== EDUCATION SECTION (Balanced Layout) ===== */
-.edu-section {
-  background: #0f1624;
-  padding: 80px 5%;
-  color: white;
-}
-
-.edu-container {
-  max-width: 1400px;
-  margin: auto;
-
-  /* FIX: cân đối 2 cột */
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.2fr 1fr;
   gap: 60px;
-  align-items: center;  /* HÌNH + CHỮ CĂN ĐỀU THEO TRUNG TÂM */
+  align-items: center;
 }
 
-/* LEFT SIDE */
-.edu-left {
-  padding-right: 20px;
-}
-
+/* TITLE */
 .edu-title {
-  font-size: 38px;
+  font-size: 42px;
   font-weight: 700;
-  margin-bottom: 30px;
-  color: #5aa0ff;
+  margin-bottom: 35px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
+.edu-icon {
+  font-size: 42px;
+}
+
+/* SCHOOL NAME */
 .edu-school {
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
+/* MAJOR */
 .edu-major {
-  color: #4da3ff;
   font-size: 22px;
+  color: #4da3ff;
   margin-bottom: 5px;
 }
 
+/* YEARS */
 .edu-year {
   font-size: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
+  opacity: 0.9;
 }
 
+/* BLOCKS */
 .edu-block {
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 }
 
 .edu-block h4 {
-  font-size: 22px;
-  margin-bottom: 8px;
+  font-size: 20px;
   font-weight: 600;
+  margin-bottom: 6px;
+  color: #89b4ff;
 }
 
 .edu-block p {
@@ -493,23 +431,22 @@
   opacity: 0.9;
 }
 
-/* RIGHT SIDE (IMAGE) */
+/* RIGHT IMAGE */
 .edu-right {
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
 .edu-right img {
-  width: 90%;
+  width: 100%;
   height: auto;
-
-  /* Tạo cảm giác cân đối và mềm mại */
   border-radius: 14px;
   object-fit: cover;
 
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  /* Shadow like sample */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.55);
 }
+
 
 
 
