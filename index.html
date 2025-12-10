@@ -37,15 +37,23 @@
 }
 
     /* Slide RIGHT */
+@keyframes slideLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Slide RIGHT (vô tận) */
 @keyframes slideRight {
-  0% { transform: translateX(-50%); }
+  0% { transform: translateX(-100%); }
   100% { transform: translateX(0); }
 }
 
-/* Slide LEFT */
-@keyframes slideLeft {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+.track-left {
+  animation: slideLeft 12s linear infinite;
+}
+
+.track-right {
+  animation: slideRight 12s linear infinite;
 }
 
     /* HERO SECTION FORMAT (giống mẫu của bạn) */
