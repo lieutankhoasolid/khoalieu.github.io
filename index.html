@@ -203,6 +203,113 @@
   font-size: 22px;
   color: #4da3ff;
 }
+    /* --- INFO SECTION WRAPPER --- */
+.info-section {
+  display: flex;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+/* --- TWO CARDS --- */
+.info-card {
+  flex: 1;
+  background: #0f1624;
+  padding: 35px;
+  border-radius: 18px;
+  color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+/* BIG TEXT QUOTES */
+.big-text {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* BLUE KEYWORDS */
+.highlight {
+  color: #4da3ff;
+}
+
+/* SECTION TITLES INSIDE CARDS */
+.info-card h3 {
+  margin-top: 18px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #4da3ff;
+}
+
+/* DIVIDER LINES */
+.divider {
+  border: none;
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+  margin: 10px 0 20px 0;
+}
+
+/* SKILLS & INTERESTS LIST FORMAT */
+.skills-list, .interests-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills-list span, .interests-list span {
+  background: #1b2436;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  border: 1px solid #2e3a55;
+}
+
+/* --- HOBBIES SECTION (RIGHT CARD) --- */
+.hobby-title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hobby-desc {
+  opacity: 0.8;
+  margin-bottom: 25px;
+}
+
+.hobby-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.hobby-item {
+  text-align: center;
+}
+
+.hobby-circle {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 3px solid #4da3ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 45px;
+  color: #4da3ff;
+  transition: 0.25s ease;
+  background: #0f1624;
+}
+
+.hobby-circle:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(77,163,255,0.45);
+}
+
+.hobby-label {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
 
   </style>
 </head>
@@ -237,7 +344,7 @@
 <section id="about" class="about-section">
   <h2 class="about-title">About Me</h2>
   <p class="about-sub">
-    This is things show you who I am. 
+    This is things that show you who I am. 
   </p>
 </section>
 
@@ -282,37 +389,86 @@
 
   <div class="container">
     <!-- Objective -->
-    <section id="objective">
-      <h2>Objective</h2>
-      <p>“Machines are just not tools, they are our best friends.”</p>
-    </section>
+    <section class="info-section">
 
-    <!-- Skills -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-item">C/C++</div>
-        <div class="skill-item">Python</div>
-        <div class="skill-item">Java</div>
-        <div class="skill-item">HTML & CSS</div>
-        <div class="skill-item">SQL</div>
-        <div class="skill-item">LaTeX</div>
-        <div class="skill-item">PHP</div>
-        <div class="skill-item">Arduino</div>
-      </div>
-    </section>
+  <!-- LEFT CARD -->
+  <div class="info-card">
+    
+    <p class="big-text">"Machines are just not tools, they are our best friends."</p>
+    <h3>LIFE MOTTO</h3>
+    <hr class="divider">
 
-    <!-- Interests -->
-    <section id="interests">
-      <h2>Interests</h2>
-      <div class="interests-list">
-        <div class="interest-item">Coding</div>
-        <div class="interest-item">Gaming</div>
-        <div class="interest-item">Listening to music</div>
-        <div class="interest-item">Research</div>
-        <div class="interest-item">Stock investing</div>
-      </div>
-    </section>
+    <p class="big-text">
+      Code with <span class="highlight">purpose</span>,
+      build with <span class="highlight">impact</span>.
+    </p>
+    <h3>OBJECTIVE</h3>
+    <hr class="divider">
+
+    <div class="skills-list">
+      <span>C/C++</span>
+      <span>Python</span>
+      <span>Java</span>
+      <span>HTML & CSS</span>
+      <span>SQL</span>
+      <span>LaTeX</span>
+      <span>PHP</span>
+      <span>Arduino</span>
+    </div>
+    <h3>SKILLS</h3>
+
+    <hr class="divider">
+
+    <div class="interests-list">
+      <span>Coding</span>
+      <span>Gaming</span>
+      <span>Listening to music</span>
+      <span>Research</span>
+      <span>Stock investing</span>
+    </div>
+    <h3>INTERESTS</h3>
+
+  </div>
+
+  <!-- RIGHT CARD (HOBBIES) -->
+  <div class="info-card">
+    <h1 class="hobby-title">Hobbies</h1>
+    <p class="hobby-desc">
+      Beyond academics, I find joy and balance through diverse interests
+    </p>
+
+    <div class="hobby-icons">
+
+  <div class="hobby-item">
+    <div class="hobby-circle">💻</div>
+    <div class="hobby-label">Coding</div>
+  </div>
+
+  <div class="hobby-item">
+    <div class="hobby-circle">🎵</div>
+    <div class="hobby-label">Music</div>
+  </div>
+
+  <div class="hobby-item">
+    <div class="hobby-circle">📚</div>
+    <div class="hobby-label">Research</div>
+  </div>
+
+  <div class="hobby-item">
+    <div class="hobby-circle">🎮</div>
+    <div class="hobby-label">Gaming</div>
+  </div>
+
+  <div class="hobby-item">
+    <div class="hobby-circle">📈</div>
+    <div class="hobby-label">Stock Investing</div>
+  </div>
+
+</div>
+
+    
+</section>
+
 
     <!-- Education -->
     <section id="education">
