@@ -359,6 +359,79 @@
   margin-top: 10px;
   font-size: 16px;
 }
+    /* ===== EDUCATION SECTION ===== */
+.edu-section {
+  background: #0f1624;
+  padding: 80px 5%;
+  color: white;
+}
+
+.edu-container {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.edu-left {
+  width: 55%;
+}
+
+.edu-title {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #5aa0ff;
+}
+
+.edu-school {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.edu-major {
+  color: #4da3ff;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.edu-year {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.edu-block {
+  margin-bottom: 25px;
+}
+
+.edu-block h4 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.edu-block p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.edu-right {
+  width: 45%;
+}
+
+.edu-right img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  object-fit: cover;
+}
+
 
 
   </style>
@@ -523,16 +596,50 @@
 
 
     <!-- Education -->
-    <section id="education">
-      <h2>Education</h2>
-      <p><strong>Le Hong Phong High School for the Gifted – Math Major (2021–2024)</strong></p>
-      <ul>
-        <li>GPA: 9.5 (9th), 9.3 (10th), 9.6 (11th), 9.5 (12th)</li>
-        <li>SAT: 1510 (720 Verbal, 790 Math)</li>
-        <li>IELTS: 7.0 Overall</li>
-        <li>AP: Calculus BC (5), Computer Science A (5)</li>
-      </ul>
-    </section>
+    <section id="education" class="edu-section">
+
+  <div class="edu-container">
+
+    <!-- LEFT SIDE: TEXT -->
+    <div class="edu-left">
+
+      <h2 class="edu-title">📘 Education</h2>
+
+      <h3 class="edu-school">
+        Le Hong Phong High School for the Gifted
+      </h3>
+
+      <p class="edu-major">Math Major</p>
+
+      <p class="edu-year">2021 – 2024</p>
+
+      <div class="edu-block">
+        <h4>GPA</h4>
+        <p>9.5 (9th) · 9.3 (10th) · 9.6 (11th) · 9.5 (12th)</p>
+      </div>
+
+      <div class="edu-block">
+        <h4>Standardized Tests</h4>
+        <p><strong>SAT:</strong> 1510 (720 Verbal, 790 Math)</p>
+        <p><strong>IELTS:</strong> 7.0 Overall</p>
+      </div>
+
+      <div class="edu-block">
+        <h4>AP Scores</h4>
+        <p>Calculus BC (5) · Computer Science A (5)</p>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE: IMAGE -->
+    <div class="edu-right">
+      <img src="lhp.jpg" alt="School Image">
+    </div>
+
+  </div>
+
+</section>
+
 
     <!-- Honors & Awards -->
     <section id="honors">
