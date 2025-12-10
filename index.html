@@ -36,9 +36,16 @@
   box-shadow: 0 6px 15px rgba(0,0,0,0.35);
 }
 
-    @keyframes scroll {
+    /* Slide RIGHT */
+@keyframes slideRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* Slide LEFT */
+@keyframes slideLeft {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } 
+  100% { transform: translateX(-50%); }
 }
 
     /* HERO SECTION FORMAT (giống mẫu của bạn) */
@@ -199,47 +206,43 @@
   </div>
 </header>
 
+  <div class="image-slider">
+  <div class="image-track track-right">
+    <img src="img1.jpg">
+    <img src="img2.jpg">
+    <img src="img3.jpg">
+    <img src="img4.jpg">
+    <img src="img5.jpg">
 
-  <!-- 🔵 IMAGE GALLERY SLIDER (NEW) -->
-<div class="image-slider">
-<div class="image-track">
-<!-- PLACEHOLDER: Thay tên các ảnh bạn upload (img1.jpg, img2.jpg, ...) -->
-<img src="img1.jpg" alt="Gallery Image">
-<img src="img2.jpg" alt="Gallery Image">
-<img src="img3.jpg" alt="Gallery Image">
-<img src="img4.jpg" alt="Gallery Image">
-<img src="img5.jpg" alt="Gallery Image">
-
-
-<!-- Lặp lại để chạy liên tục mượt -->
-<img src="img1.jpg" alt="Gallery Image">
-<img src="img2.jpg" alt="Gallery Image">
-<img src="img3.jpg" alt="Gallery Image">
-<img src="img4.jpg" alt="Gallery Image">
-<img src="img5.jpg" alt="Gallery Image">
-</div>
+    <!-- Duplicate để chạy vô tận -->
+    <img src="img1.jpg">
+    <img src="img2.jpg">
+    <img src="img3.jpg">
+    <img src="img4.jpg">
+    <img src="img5.jpg">
+  </div>
 </div>
 
 
-<!-- Image Gallery Slider -->
-<div class="image-slider">
-<div class="image-track">
-<!-- PLACEHOLDER: Thay tên các ảnh bên dưới bằng ảnh bạn upload lên GitHub -->
-<img src="img1.jpg" alt="Gallery Image">
-<img src="img2.jpg" alt="Gallery Image">
-<img src="img3.jpg" alt="Gallery Image">
-<img src="img4.jpg" alt="Gallery Image">
-<img src="img5.jpg" alt="Gallery Image">
+  <div class="image-slider">
+  <div class="image-track track-left">
+    <img src="img6.jpg">
+    <img src="img7.jpg">
+    <img src="img8.jpg">
+    <img src="img9.jpg">
+    <img src="img10.jpg">
+
+    <!-- Duplicate để chạy vô tận -->
+    <img src="img6.jpg">
+    <img src="img7.jpg">
+    <img src="img8.jpg">
+    <img src="img9.jpg">
+    <img src="img10.jpg">
+  </div>
+</div>
 
 
-<!-- Lặp lại để chạy mượt -->
-<img src="img1.jpg" alt="Gallery Image">
-<img src="img2.jpg" alt="Gallery Image">
-<img src="img3.jpg" alt="Gallery Image">
-<img src="img4.jpg" alt="Gallery Image">
-<img src="img5.jpg" alt="Gallery Image">
-</div>
-</div>
+
 
   <div class="container">
     <!-- Objective -->
