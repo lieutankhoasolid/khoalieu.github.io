@@ -379,11 +379,36 @@
   align-items: center;
 }
 
-/* TITLE */
+/* ===== EDUCATION — FIX HEIGHT BALANCE ===== */
+.edu-section {
+  background: #0f1624;
+  padding: 100px 6%;
+  color: white;
+}
+
+.edu-container {
+  max-width: 1500px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;   /* Hình to hơn chút */
+  gap: 70px;
+  align-items: stretch;                 /* CHỮ CAO THEO CHIỀU CAO HÌNH */
+}
+
+/* LEFT */
+.edu-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;               /* căn giữa theo chiều dọc */
+  gap: 18px;                             /* khoảng cách đều nhau */
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .edu-title {
   font-size: 42px;
   font-weight: 700;
-  margin-bottom: 35px;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -393,37 +418,25 @@
   font-size: 42px;
 }
 
-/* SCHOOL NAME */
 .edu-school {
   font-size: 32px;
   font-weight: 600;
-  margin-bottom: 8px;
 }
 
-/* MAJOR */
 .edu-major {
   font-size: 22px;
   color: #4da3ff;
-  margin-bottom: 5px;
 }
 
-/* YEARS */
 .edu-year {
   font-size: 20px;
-  margin-bottom: 30px;
   opacity: 0.9;
-}
-
-/* BLOCKS */
-.edu-block {
-  margin-bottom: 28px;
 }
 
 .edu-block h4 {
   font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 6px;
   color: #89b4ff;
+  margin-bottom: 4px;
 }
 
 .edu-block p {
@@ -431,20 +444,22 @@
   opacity: 0.9;
 }
 
-/* RIGHT IMAGE */
+/* RIGHT (BIGGER IMAGE + SHIFT LEFT) */
 .edu-right {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;  /* ĐẨY HÌNH SANG TRÁI */
 }
 
 .edu-right img {
-  width: 115%;      /* TO HƠN 15% */
-  height: auto;
-  border-radius: 14px;
+  width: 130%;                   /* TO HƠN RÕ RỆT */
+  height: 580px;                 /* TĂNG CHIỀU CAO */
   object-fit: cover;
-  transform: translateX(-8%);   /* Kéo qua trái để cân bố cục */
-  box-shadow: 0 12px 35px rgba(0,0,0,0.55);
+  border-radius: 18px;
+  transform: translateX(-12%);   /* DỊCH TRÁI NHẸ CHO ĐẸP */
+  box-shadow: 0 18px 40px rgba(0,0,0,0.55);
 }
+
 
 
 
