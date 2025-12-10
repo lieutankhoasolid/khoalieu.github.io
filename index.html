@@ -41,50 +41,83 @@
   100% { transform: translateX(-50%); } 
 }
 
+    /* HERO SECTION FORMAT (giống mẫu của bạn) */
+.hero {
+  background: #111;
+  color: white;
+  padding: 80px 5%;
+  display: flex;
+  justify-content: center;
+}
 
-    /* Header / Hero */
-    header.hero {
-      background: #222;
-      color: white;
-      text-align: center;
-      padding: 80px 20px;
-      position: relative;
-      overflow: hidden;
-    }
-    header.hero .hero-content {
-      position: relative;
-      z-index: 2;
-      animation: fadeInDown 1s ease-out;
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-40px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    header.hero::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: url('hero-bg.jpg') center/cover no-repeat;
-      opacity: 0.3;
-      z-index: 1;
-    }
-    header.hero .avatar {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      border: 4px solid #fff;
-      object-fit: cover;
-      margin: 0 auto 20px;
-    }
-    header.hero h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
-    header.hero p.subtitle {
-      font-size: 20px;
-      opacity: 0.8;
-    }
+.hero-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* LEFT TEXT */
+.hero-text .hello {
+  font-size: 32px;
+  color: #5aa0ff;
+  margin-bottom: 10px;
+}
+
+.big-name {
+  font-size: 70px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  line-height: 1.1;
+}
+
+.bio {
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 600px;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+/* BUTTON */
+.hero-button {
+  display: inline-block;
+  padding: 16px 30px;
+  background: #0d1f92;
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.hero-button:hover {
+  background: #1c2fe0;
+  transform: translateY(-3px);
+}
+
+/* AVATAR CIRCLE (gradient tím giống mẫu) */
+.avatar-wrapper {
+  width: 330px;
+  height: 330px;
+  border-radius: 50%;
+  padding: 8px;
+  background: linear-gradient(135deg, #873cff, #a858ff, #c67bff);
+  box-shadow: 0 0 35px rgba(140, 60, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
 
     /* Container */
     .container {
@@ -142,14 +175,30 @@
 
   <!-- HERO / Header -->
   <header class="hero">
-    <!-- PLACEHOLDER: thay 'avatar.jpg' bằng ảnh bạn muốn -->
-    <img src="avatar.jpg" alt="Avatar" class="avatar">
-    <div class="hero-content">
-      <h1>Liễu Tấn Khoa</h1>
-      <p class="subtitle">Future Computer Science (AI) Student</p>
-      <p class="subtitle"><i>“Dare to dream, dare to doctors”</i></p>
+  <div class="hero-container">
+    
+    <!-- LEFT CONTENT -->
+    <div class="hero-text">
+      <p class="hello">Hello World, I am</p>
+      <h1 class="big-name">Liễu Tấn Khoa</h1>
+
+      <p class="bio">
+        A high school student aspiring to explore Computer Science and AI, driven by curiosity 
+        and a desire to broaden my perspective. I seek opportunities that challenge me to 
+        develop my expertise while contributing to projects that create meaningful impact.
+      </p>
+
+      <a href="#objective" class="hero-button">Explore My Journey</a>
     </div>
-  </header>
+
+    <!-- RIGHT AVATAR -->
+    <div class="avatar-wrapper">
+      <img src="avatar.jpg" alt="Avatar">
+    </div>
+
+  </div>
+</header>
+
 
   <!-- 🔵 IMAGE GALLERY SLIDER (NEW) -->
 <div class="image-slider">
